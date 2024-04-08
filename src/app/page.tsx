@@ -1,32 +1,29 @@
+import Giveaways from "@/components/Giveaways";
+import HeroHome from "@/components/HeroHome";
+import NavbarContent from "@/components/Navbar/NavbarContent";
+import SocialNetworkHero from "@/components/SocialNetwork";
 
-function createStudent(nombre: string, calificaciones: number[]) {
-  return {
-    nombre: nombre,
-    calificaciones: calificaciones,
-    calcularPromedio: function () {
-      if (this.calificaciones.length === 0) {
-        return 0;
-      }
-      const sum = this.calificaciones.reduce((total, calificacion) => total + calificacion, 0);
-      return sum / this.calificaciones.length;
-    }
-  };
-}
-
-const student1 = createStudent("Ganlo", [90, 85, 95, 92, 88]);
-const student1Promedio = student1.calcularPromedio();
-
-const student2 = createStudent("Lilynn", [80, 75, 85, 90, 92]);
-const student2Promedio = student2.calcularPromedio();
-
-console.log(`${student1.nombre}: ${student1Promedio}`);
-console.log(`${student2.nombre}: ${student2Promedio}`);
 
 export default function Home() {
   return (
-    <div className="">
-      <p>{student1.nombre}: {student1Promedio}</p>
-      <p>{student2.nombre}: {student2Promedio}</p>
-    </div>
+    <>
+    <HeroHome />
+    <SocialNetworkHero/>
+    <section className=' py-5 font-semibold text-slate-100 mt-5'>
+        <a href='https://www.twitch.tv/lilynn02' className='p-4  ease-in duration-300'>
+            <h2 className='text-lg md:text-4xl text-center font-Holtwood text-black -rotate-6'>EN VIVO</h2>
+            <h3 className='text-xl md:text-5xl text-center font-Holtwood p-4'>TWITCH.TV/LILYNN02</h3>
+        </a>
+        <div className='flex flex-wrap items-center justify-center p-4'>
+            <iframe src='https://player.twitch.tv/?channel=lilynn02&parent=localhost' allowFullScreen height="608" width="1080" />
+            <iframe id="twitch-chat-embed"
+                src="https://www.twitch.tv/embed/lilynn02/chat?parent=localhost"
+                height="608"
+                width="350">
+            </iframe>
+        </div>
+    </section>
+    <Giveaways />
+</>
   );
 }

@@ -2,10 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'BeaufortforLOL-Bold';
+    src: url('../../public/fonts/BeaufortforLOL-BoldItalic.woff2') format('woff2');
+
+  }
+  @font-face {
+    font-family: 'HoltwoodOneSC';
+    src: url('../../public/fonts/HoltwoodOneSC-Regular.woff2') format('woff2');
+  }
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #8EC5FC;
-  background-image: linear-gradient(62deg,#c386fd 0%, #8EC5FC 100%);
-  
+  font-family: "HoltwoodOneSC",'Roboto', sans-serif;
+  background-color: #C8B6FF;
+  background-image: linear-gradient(62deg, #C8B6FF 0%, #BBD0FF 100%);
+  background-attachment: fixed;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(174, 174, 174);
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(88, 88, 88);
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+
 }

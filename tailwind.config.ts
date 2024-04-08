@@ -13,6 +13,10 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        Beaufort: ["BeaufortforLOL-Bold", "sans-serif"],
+        Holtwood: ["HoltwoodOneSC", "sans-serif"],
+      }
     },
   },
   plugins: [],
