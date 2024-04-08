@@ -9,7 +9,7 @@ const FooterContent: React.FC = () => {
             <hr
                 className="my-7 h-[2px] w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-white to-transparent md:my-9"
             />
-            <div className="text-center font-semibold">
+            <div className="text-center font-Holtwood">
                 <p>Sigueme en mis redes sociales</p>
             </div>
             <div className="flex flex-row gap-4">
